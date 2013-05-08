@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   if File.exists?('gem-private_key.pem')
     s.signing_key = 'gem-private_key.pem'
     s.cert_chain  = ['gem-public_cert.pem']
-  else
-    warn 'Warning: No private key present, creating unsigned gem.'
+#  else
+#    warn 'Warning: No private key present, creating unsigned gem.'
   end
 
   s.files             = ['mongo.gemspec', 'LICENSE', 'VERSION']
