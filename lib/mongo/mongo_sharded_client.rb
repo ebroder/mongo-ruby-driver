@@ -24,6 +24,8 @@ module Mongo
         raise MongoArgumentError, "A MongoShardedClient requires at least one seed node."
       end
 
+      nodes.shuffle!
+
       @seeds = nodes.map do |host_port|
         Support.normalize_seeds(host_port)
       end
